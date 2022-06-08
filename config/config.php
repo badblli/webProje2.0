@@ -13,7 +13,7 @@ date_default_timezone_set('Europe/Istanbul');
 define('MYSQL_HOST',	'104.248.247.191');
 define('MYSQL_DB',		'projects');
 define('MYSQL_USER',	'test');
-define('MYSQL_PASS',	'38!B.nuR07');
+define('MYSQL_PASS',	'');
 define('PATH',    'http://localhost/webproje.github.io/');*/
 
 define('MYSQL_HOST',	'localhost');
@@ -22,10 +22,10 @@ define('MYSQL_USER',	'root');
 define('MYSQL_PASS',	'');
 define('PATH',    'http://localhost/webproje.github.io/');
 
-include 'config/db.php';
-
+// include 'config/db.php';
+include '../../config/db.php';
 try {
-   // $conn = new PDO('mysql:host=104.248.247.191;dbname=projects;charset=utf8', "test", "38!B.nuR07");
+   // $conn = new PDO('mysql:host=104.248.247.191;dbname=projects;charset=utf8', "test", "");
    $conn = new PDO('mysql:host=localhost;dbname=projects;charset=utf8', "root", "");
 }
 catch (PDOException $hata){
@@ -49,6 +49,7 @@ catch (PDOException $hata){
         $TwitterLink   = $config["TwitterLink"];
         $InstagramLink   = $config["InstagramLink"];
         $SabitTelefon   = $config["SabitTelefon"];
+        $Author = $config["Author"];
 
 
 
@@ -58,6 +59,5 @@ catch (PDOException $hata){
 
     }
     else{
-        //echo site ayar sorgusu hatalı";
         die();
     }

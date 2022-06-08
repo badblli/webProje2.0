@@ -119,7 +119,7 @@ if((!$SayfaKoduDegeri) or ($SayfaKoduDegeri == "") or ($SayfaKoduDegeri==0)){
         <li><a href="#news">HABERLER</a></li>
         <li><a href="#products">ÜRÜNLER</a></li>
         <li><a href="#contact">İLETİŞİM</a></li>
-        <li><a href="login.php">ADMIN</a></li>
+        <li><a href="xtbadmin/index.php">ADMIN</a></li>
       </ul>
     </div>
   </div>
