@@ -19,12 +19,12 @@ Veri tabanı bağlantısının kesilmemesi ve bilgi akışının sürekliliği a
 <img src="https://i.hizliresim.com/qbtdmf9.png" align="center" width ="400" height ="400">
 
 
-# 7. Projenin Fonksiyonları: 
+# 7. Projenin Fonksiyonları
 
- ## Firma Tanıtımı: 
+ ## Firma Tanıtımı:
  Anlaştığım firmanın benden istediği şekilde basit bir website tasarlayıp kodladım. 
 
- ## Zirai Ürünlerin Tanıtımı:
+ ## Zirai Ürünlerin Tanıtımı
   Firmanın bana vermiş olduğu ürünler listesinden yola çıkarak tanıtım sayfasını hazırladım.
 ## Admin Panel: 
 Yönetici paneli için harici bir web sitesi yapmak yerine mevcut siteye gömülü bir sistem yapmayı tercih ettim. Bu panelde site ayarları(site adı, başlığı, açıklaması, anahtar kelimeleri, logo, email, sosyal medya ve iletişim bilgileri) bunun yanı sıra sitede görüntülenecek ürünler hakkında bilgileri düzenlenelebilir. Fakat anlaştığım firma sitenin admin panelini kullanmayacağından burayı sadece ürünlere kendim erişmek için ekledim. 
