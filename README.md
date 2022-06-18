@@ -28,5 +28,5 @@ Veri tabanı bağlantısının kesilmemesi ve bilgi akışının sürekliliği a
 
  ## Zirai Ürünlerin Tanıtımı
   Firmanın bana vermiş olduğu ürünler listesinden yola çıkarak tanıtım sayfasını hazırladım.
- ## Admin Panel: 
+ ## Admin Panel
   Yönetici paneli için harici bir web sitesi yapmak yerine mevcut siteye gömülü bir sistem yapmayı tercih ettim. Bu panelde site ayarları(site adı, başlığı, açıklaması, anahtar kelimeleri, logo, email, sosyal medya ve iletişim bilgileri) bunun yanı sıra sitede görüntülenecek ürünler hakkında bilgileri düzenlenelebilir. Fakat anlaştığım firma sitenin admin panelini kullanmayacağından burayı sadece ürünlere kendim erişmek için ekledim. 
