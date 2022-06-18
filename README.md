@@ -16,7 +16,7 @@ Kullanıcılara rahat bir kullanım sunmak adına web sitesi responsive olarak t
 Veri tabanı bağlantısının kesilmemesi ve bilgi akışının sürekliliği adına linux server kiralanarak bununla beraber 7/24 desteklenmesi planlanmıştır.
 
 # 5. Veri tabanı Diyagramı
-<img src="https://i.hizliresim.com/qbtdmf9.png" align="left" width ="400" height ="400">
+<img src="https://i.hizliresim.com/qbtdmf9.png" align="center" width ="400" height ="400">
 
 
 # 7. Projenin Fonksiyonları: 
