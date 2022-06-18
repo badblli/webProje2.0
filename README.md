@@ -7,7 +7,7 @@ Bu web sayfası Ondokuz Mayıs Üniversitesi Web Projesi Yönetimi dersi Final P
 
 ## Kullanılan Teknolojiler
 ![Php](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/Mysql-00758F?style=flat-square&logo=MySQL&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-00758F?style=flat-square&logo=MySQL&logoColor=white)
 ![Javascript](https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E)
 ![AJAX](https://img.shields.io/badge/jQuery%20AJAX-0769AD?style=flat-square&logo=jquery&logoColor=white)
 ![DigitalOcean](https://img.shields.io/badge/Digital_Ocean-0080FF?style=flat-square&logo=DigitalOcean&logoColor=white)
