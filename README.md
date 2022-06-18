@@ -4,7 +4,7 @@
 # Proje Hakkında Genel Tanımlar ve Açıklamalar
 Bu web sayfası Ondokuz Mayıs Üniversitesi Web Projesi Yönetimi dersi Final Projesi için oluşturulmuştur.
 
-## Projenin Tanımı: 
+## Projenin Tanımı
 Proje, anlaştığım firmanın istekleri doğrultusunda ziraat firmasının tanıtımı,ziraat mühendisi hakkında iletişim bilgileri ve zirai ürün markalarının kısa tanıtımlarını içermektedir. Bu bilgiler kullandığım MySQL veritabanından çekilmektedir.
 Projede Yararlanılan Platform ve Yazılım Dilleri: Öncelikle projemi hazırlarken PHP yazılım dilinin yanı sıra AJAX kullanmayı tercih ettim. Günümüz teknolojisine ayak uydurmayı başarmış, stabil ve hızlı çalışan bir sunucu programlama dilidir. Tasarım kısmında ise hazır tema olarak bootstrap tercih ettim ancak kendim eklediğim HTML,CSS ve JAVASCRIPT alanları da mevcuttur. Veri tabanı olarak MySQL kullanmayı tercih ettim. Bunun sebebi ise PHP’nin Linux platformlarda daha hızlı çalıştığı ve MySQL en iyi senkronizasyonu Linux alt yapısında sağlamasından kaynaklanmaktadır. 
 # Endüstri analizi 
