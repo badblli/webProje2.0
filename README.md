@@ -4,6 +4,14 @@
 # Proje Hakkında Genel Tanımlar ve Açıklamalar
 Bu web sayfası Ondokuz Mayıs Üniversitesi Web Projesi Yönetimi dersi Final Projesi için oluşturulmuştur.
 
+
+## Kullanılan Teknolojiler
+![Php](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/-MySQL-black?style=flat-square&logo=mysql)
+![Javascript](https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E)
+![DigitalOcean](https://img.shields.io/badge/Digital_Ocean-0080FF?style=flat-square&logo=DigitalOcean&logoColor=white)
+![Ubuntu22.04](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white)
+
 ## Projenin Tanımı
 Proje, anlaştığım firmanın istekleri doğrultusunda ziraat firmasının tanıtımı,ziraat mühendisi hakkında iletişim bilgileri ve zirai ürün markalarının kısa tanıtımlarını içermektedir. Bu bilgiler kullandığım MySQL veritabanından çekilmektedir.
 Projede Yararlanılan Platform ve Yazılım Dilleri: Öncelikle projemi hazırlarken PHP yazılım dilinin yanı sıra AJAX kullanmayı tercih ettim. Günümüz teknolojisine ayak uydurmayı başarmış, stabil ve hızlı çalışan bir sunucu programlama dilidir. Tasarım kısmında ise hazır tema olarak bootstrap tercih ettim ancak kendim eklediğim HTML,CSS ve JAVASCRIPT alanları da mevcuttur. Veri tabanı olarak MySQL kullanmayı tercih ettim. Bunun sebebi ise PHP’nin Linux platformlarda daha hızlı çalıştığı ve MySQL en iyi senkronizasyonu Linux alt yapısında sağlamasından kaynaklanmaktadır. 
