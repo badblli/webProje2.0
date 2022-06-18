@@ -77,8 +77,8 @@ if(OturumAktif()==true)
                                     <input id="Author" type="text"
                                            name="Author"
                                            class="form-control input-sm "
-                                           value="<?= $Author ?>"
-                                           placeholder="<?= $Author ?>">
+                                           value=" <?= $SiteCopyright ?> "
+                                           placeholder=" <?= $SiteCopyright ?> ">
                                 </div>
                             </div>
 							<hr>

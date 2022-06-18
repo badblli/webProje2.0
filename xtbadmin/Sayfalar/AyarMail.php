@@ -1,9 +1,9 @@
 <?php
-require_once '../../system/guvenlik.php';
+require_once '../../config/guvenlik.php';
 if(OturumAktif()==true)
 {
-    require_once '../../system/ayar.php';
-	require_once '../../system/fonksiyon.php';
+    require_once '../../config/config.php';
+	require_once '../../config/fonksiyon.php';
     require_once 'SayfaUst.php';
     require_once 'SolMenu.php';
     ?>
@@ -36,8 +36,8 @@ if(OturumAktif()==true)
                                 <div class="col-sm-9">
                                     <input type="text" name="SmtpHost"
                                            class="form-control input-sm "
-                                           value="<?= $SmtpHost ?>"
-                                           placeholder="mail.topalhafriyat.net">
+                                           value="<?= $SiteEmail ?>"
+                                           placeholder="mail.balabanlar.net">
                                 </div>
                             </div>
                             <div class="form-group" >
@@ -46,8 +46,8 @@ if(OturumAktif()==true)
                                     <input id="SmtpUser" type="text"
                                            name="SmtpUser"
                                            class="form-control input-sm "
-                                           value="<?= $SmtpUser ?>"
-                                           placeholder="bilgi@topalhafriyat.net">
+                                           value="<?= $SiteEmail ?>"
+                                           placeholder="bilgi@balabanlar.net">
                                 </div>
                             </div>
                             <div class="form-group" >
@@ -56,7 +56,7 @@ if(OturumAktif()==true)
                                     <input id="SmtpPassword" type="password"
                                            name="SmtpPassword"
                                            class="form-control input-sm "
-                                           value="<?= $SmtpPassword ?>"
+                                           value="<?=$SiteEmailSifre ?>"
                                            placeholder="123456">
                                 </div>
                             </div>
@@ -66,7 +66,7 @@ if(OturumAktif()==true)
                                     <input id="SmtpPort" type="text"
                                            name="SmtpPort"
                                            class="form-control input-sm "
-                                           value="<?= $SmtpPort ?>"
+                                           value="587""
                                            placeholder="587">
                                 </div>
                             </div>

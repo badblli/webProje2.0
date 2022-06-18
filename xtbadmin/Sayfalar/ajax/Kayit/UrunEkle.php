@@ -1,9 +1,9 @@
 <?php
-require_once '../../../../system/guvenlik.php';
+require_once '../../config/guvenlik.php';
 if(OturumAktif()==true)
 {
-require_once '../../../../system/ayar.php';
-require_once '../../../../system/fonksiyon.php';
+    require_once '../../config/config.php';
+	require_once '../../config/fonksiyon.php';
 
 if($_POST){
 	$islem		=$_POST['islem'];
@@ -12,20 +12,13 @@ if($_POST){
  
 	if($islem=="Kayit")
     {
-		$UrunKatID		= $_POST['UrunKatID'];
-		$UrunResmi		= $_POST['Resim'];
-		$UrunAdi		= $_POST['UrunAdi'];
-		$UrunKodu		= $_POST['UrunKodu'];
-		$UrunTipi		= $_POST['UrunTipi'];
-		$UrunRengi		= $_POST['UrunRengi'];
-		$UrunAciklama	= $_POST['UrunAciklama'];
-		if ($UrunKatID == "" && !is_numeric($UrunKatID))
-        {
-			$Sonuc["hata"]='Lütfen Kategori Alanını Boş Bırakmayın..!';
-			echo json_encode($Sonuc);
-			return;	
-        }	
-		if ($UrunAdi == "" )
+		$urunAdi		= $_POST['urunAdi'];
+		$urunTuru		= $_POST['urunTuru'];
+		$ureticiFirma	= $_POST['ureticiFirma'];
+		$urunAciklama	= $_POST['urunAciklama	'];
+		$urunResim		= $_POST['urunResim'];
+		$urunDurum		= $_POST['urunDurum'];
+		if ($urunAdi == "" )
         {
 			$Sonuc["hata"]='Lütfen Ürün Adını Boş Bırakmayın..!';
 			echo json_encode($Sonuc);
@@ -38,8 +31,8 @@ if($_POST){
 			return;	
         }	
 			
-		$save = $db->prepare("INSERT INTO urunler (UrunKatID,UrunResmi,UrunAdi,UrunKodu,UrunTipi,UrunRengi,UrunAciklama,IsActive) VALUES (?,?,?,?,?,?,?,?)");
-		$save->execute(array($UrunKatID,$UrunResmi,$UrunAdi,$UrunKodu,$UrunTipi,$UrunRengi,$UrunAciklama,1));
+		$save = $db->prepare("INSERT INTO products (urunAdi,urunTuru,ureticiFirma,urunAciklama, urunResim, urunDurum) VALUES (?,?,?,?,?,?)");
+		$save->execute(array($urunAdi,$ureticiFirma,$ureticiFirma,$urunAciklama	,$UrunTipi,$UrunRengi,$UrunAciklama,1));
 		if ( $save )
 		{									   
 			$Sonuc["ok"] = 'Başarı ile Eklenmiştir !' ;
@@ -51,36 +44,28 @@ if($_POST){
 	}
 	if($islem=="Duzenle")
     {
-		$ID				= $_POST['ID'];
-		$UrunKatID		= $_POST['UrunKatID'];
-		$UrunResmi		= $_POST['Resim'];
-		$UrunAdi		= $_POST['UrunAdi'];
-		$UrunKodu		= $_POST['UrunKodu'];
-		$UrunTipi		= $_POST['UrunTipi'];
-		$UrunRengi		= $_POST['UrunRengi'];
-		$UrunAciklama	= $_POST['UrunAciklama'];
+		$urunAdi		= $_POST['urunAdi'];
+		$urunTuru		= $_POST['urunTuru'];
+		$ureticiFirma	= $_POST['ureticiFirma'];
+		$urunAciklama	= $_POST['urunAciklama	'];
+		$urunResim		= $_POST['urunResim'];
+		$urunDurum		= $_POST['urunDurum'];
 		
-		if ($UrunKatID == "" && !is_numeric($UrunKatID))
-        {
-			$Sonuc["hata"]='Lütfen Kategori Alanını Boş Bırakmayın..!';
-			echo json_encode($Sonuc);
-			return;	
-        }	
-		if ($UrunAdi == "" )
+		if ($urunAdi == "" )
         {
 			$Sonuc["hata"]='Lütfen Ürün Adını Boş Bırakmayın..!';
 			echo json_encode($Sonuc);
 			return;	
         }	
-		if ($UrunResmi == "")
+		if ($urunResim == "")
         {
 			$Sonuc["hata"]='Lütfen Resim Alanını Boş Bırakmayın..!';
 			echo json_encode($Sonuc);
 			return;	
         }
 		
-		$save = $db->prepare("UPDATE urunler SET UrunKatID=?,UrunResmi=?,UrunAdi=?,UrunKodu=?,UrunTipi=?,UrunRengi=?,UrunAciklama=?, IsActive=? WHERE ID=?");
-		$save->execute(array($UrunKatID,$UrunResmi,$UrunAdi,$UrunKodu,$UrunTipi,$UrunRengi,$UrunAciklama,1,$ID));
+		$save = $db->prepare("UPDATE products SET urunAdi=?,urunTuru=?,ureticiFirma=?,urunAciklama=?, urunResim=?, urunDurum=? WHERE id=id");
+		$save->execute(array($urunAdi,$ureticiFirma,$ureticiFirma,$urunAciklama	,$UrunTipi,$UrunRengi,$UrunAciklama,1));
 		if ( $save )
 		{									   
 			$Sonuc["ok"] = 'Başarı ile Güncellenmiştir !' ;

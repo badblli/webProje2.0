@@ -15,17 +15,18 @@ require_once '../../../../config/fonksiyon.php';
 	$deger=array();
 	$sonuc = array();
 	 
-	$sql = $conn->prepare("select urunResim, urunAdi,urunTuru, urunSatisFiyat, urunAciklama, id  from products");
-	$sql->bindParam(":Kosul",$Kosul,PDO::PARAM_STR);							
+	$sql = $conn->prepare("select urunResim, urunAdi,urunTuru, ureticiFirma, urunSatisFiyat, urunAciklama, id  from products");
+	//$sql->bindParam(":Kosul",$Kosul,PDO::PARAM_STR);							
     $sql->execute();
 	
 				     while($row=$sql->fetch(PDO::FETCH_ASSOC)) 
 					{
 						$say++;
-						$Resim= $row['urunResmi'];
+						$Resim= $row['urunResim'];
 						$UrunAdi= $row['urunAdi'];
 						$UrunTipiAdi= $row['urunTuru'];
-						$Fiyat= $row['urunSatisFiyat'];
+						$ureticiFirma = $row['ureticiFirma'];
+						//$Fiyat= $row['urunSatisFiyat'];
 						$UrunAciklama= kisalt($row['urunAciklama'],130);
 						$ID = $row['id'];
 						
@@ -37,7 +38,7 @@ require_once '../../../../config/fonksiyon.php';
 							<td class="ResimSekil"><img src="'.$Resim.'" height="50px" width="50px"></td>
 							<td>'.$UrunAdi.'</td>
 							<td>'.$UrunTipiAdi.'</td>
-							<td>'.$Fiyat.'</td>
+							<td>'.$ureticiFirma.'</td>
 							<td>'.$UrunAciklama.'</td>
 						</tr>  ';
 					}	

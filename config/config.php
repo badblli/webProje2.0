@@ -22,8 +22,8 @@ define('MYSQL_USER',	'root');
 define('MYSQL_PASS',	'');
 define('PATH',    'http://localhost/webproje.github.io/');
 
-// include 'config/db.php';
-include '../../config/db.php';
+//include 'config/db.php';
+//include '../../config/db.php';
 try {
    // $conn = new PDO('mysql:host=104.248.247.191;dbname=projects;charset=utf8', "test", "");
    $conn = new PDO('mysql:host=localhost;dbname=projects;charset=utf8', "root", "");
@@ -49,7 +49,7 @@ catch (PDOException $hata){
         $TwitterLink   = $config["TwitterLink"];
         $InstagramLink   = $config["InstagramLink"];
         $SabitTelefon   = $config["SabitTelefon"];
-        $Author = $config["Author"];
+        //$Author = $config["Author"];
 
 
 

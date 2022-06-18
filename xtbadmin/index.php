@@ -2,7 +2,7 @@
 session_start();
 if ($_SESSION && $_SESSION["Oturum"] != False) {
     if($_SESSION['UserID']){
-		header('location: xtbadmin/Sayfalar/Anasayfa.php');
+		header('location: Sayfalar/Anasayfa.php');
 	}
 } else {
 	$_SESSION["Oturum"] = False;
@@ -83,7 +83,12 @@ if ($_SESSION && $_SESSION["Oturum"] != False) {
             $bilgi = '';
         }
     ?>
-
+    <!-- 
+Bismillahirrahmanirrahim
+Bu Sistem Mücahit TOPAL tarafından Kodlanmıştır.
+info@mucahittopal.com
+www.mucahittopal.com
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -92,7 +97,6 @@ if ($_SESSION && $_SESSION["Oturum"] != False) {
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" type="text/css" href="css/theme.css">
     <link rel="stylesheet" type="text/css" href="css/admin-forms.css">
-    <link rel="shortcut icon" href="">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -113,10 +117,6 @@ if ($_SESSION && $_SESSION["Oturum"] != False) {
             <section id="content">
                 <div class="admin-form theme-info" id="login1" style="max-width: 400px;">
                     <div class="row mb15 table-layout">
-
-                        <div class="col-xs-6 va-m pln">
-                                 <img src="" title="ADMIN PANEL | @badblli" class="img-responsive w250">
-                         </div>
                     </div>
                     <div class="panel panel-info mt10 br-n">
  

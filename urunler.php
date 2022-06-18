@@ -1,5 +1,6 @@
 <?php
 require 'config/config.php';
+include 'config/db.php';
 
 $icerikler = DB::get("SELECT * FROM products ORDER BY id DESC");
 $gubreler = DB::get("SELECT * FROM products WHERE urunTuru = 'Gubre' and urunDurum = '1'");

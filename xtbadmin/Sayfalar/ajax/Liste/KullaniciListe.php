@@ -15,7 +15,7 @@ require_once '../../../../config/fonksiyon.php';
 	$deger=array();
 	$sonuc = array();
 	 
-	$sql = $db->prepare("select *  from kullanicilar  
+	$sql = $conn->prepare("select *  from kullanicilar  
 						where IsActive=1 and
                             (
                             KullaniciAdi like :Kosul

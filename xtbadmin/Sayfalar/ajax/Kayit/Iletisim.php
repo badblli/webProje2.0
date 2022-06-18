@@ -12,9 +12,8 @@ if($_POST){
  
 	if($islem=="Kayit")
     {
-		$Tel= $_POST['Tel'];
-		$Mail= $_POST['Mail'];
-		$Adres= $_POST['Adres'];
+		$Tel= $_POST[' SabitTelefon'];
+		$Mail= $_POST['SiteEmail'];
 			
 		if ($Tel == "")
         {
@@ -28,8 +27,8 @@ if($_POST){
 			echo json_encode($Sonuc);
 			return;	
         }	
-		$save = $db->prepare("UPDATE firmabilgileri SET Tel=?,Mail=?,Adres=? LIMIT 1");
-		$save->execute(array($Tel,$Mail,$Adres));
+		$save = $conn->prepare("UPDATE config SET SabitTelefon=?,SiteEmail=? LIMIT 1");
+		$save->execute(array($Tel,$Mail));
 		if ( $save )
 		{									   
 			$Sonuc["ok"] = 'Başarı ile Güncellenmiştir !' ;

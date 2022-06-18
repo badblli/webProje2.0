@@ -1,26 +1,26 @@
 <?php
-require_once '../../../../system/guvenlik.php';
+require_once '../../config/guvenlik.php';
 if(OturumAktif()==true)
 {
-require_once '../../../../system/ayar.php';
-require_once '../../../../system/fonksiyon.php';
+	require_once '../../../../config/config.php';
+	require_once '../../../../config/fonksiyon.php';
 
 if($_POST){
-	$islem		=$_POST['islem'];
+	$islem=$_POST['islem'];
 	$Sonuc=[];
  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
  
 	if($islem=="Kayit")
     {
-		$Hakkinda= $_POST['Hakkinda'];
+		$Hakkinda= $_POST['SiteDescription'];
 			
 		if ($Hakkinda == "")
         {
 			$Sonuc["hata"]='Lütfen Hakkında Alanını Boş Bırakmayın..!';
 			echo json_encode($Sonuc);
 			return;	
-        }	
-		$save = $db->prepare("UPDATE firmabilgileri SET Hakkinda=? LIMIT 1");
+        }
+		$save = $conn->prepare("UPDATE config SET SiteDescription=? WHERE id=0");
 		$save->execute(array($Hakkinda));
 		if ( $save )
 		{									   

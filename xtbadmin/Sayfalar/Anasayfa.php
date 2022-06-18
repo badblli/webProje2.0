@@ -27,19 +27,19 @@
         <!-- ./col -->
 		<div class="col-lg-3 col-xs-6">
           <!-- small box -->
-		  <?php $UrunTipQuery=$conn->query("SELECT COUNT(DISTINCT urunTuru) AS Sonuc FROM products");//SELECT COUNT(DISTINCT urunTuru) AS Sonuc FROM products
+		  <?php $UrunTipQuery=$conn->query("SELECT COUNT(*) AS Sonuc FROM config");//SELECT COUNT(DISTINCT urunTuru) AS Sonuc FROM products
 				$UrunTipRow = $UrunTipQuery->fetch(PDO::FETCH_ASSOC);
 				$UrunTipSonuc=$UrunTipRow['Sonuc']; ?>
           <div class="small-box bg-green">
             <div class="inner">
               <h3><?= $UrunTipSonuc?></h3>
 
-              <p>Ürün Tipleri</p>
+              <p>Ayarlar</p>
             </div>
             <div class="icon">
               <i class="fa fa-gg"></i>
             </div>
-            <a href="UrunTipListe.php" class="small-box-footer">Devamı <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="AyarGenel.php" class="small-box-footer">Devamı <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

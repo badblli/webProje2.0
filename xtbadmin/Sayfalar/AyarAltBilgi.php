@@ -2,8 +2,8 @@
 require_once '../../config/guvenlik.php';
 if(OturumAktif()==true)
 {
-    require_once '../../config/config.php';
-	require_once '../config/fonksiyon.php';
+  require_once '../../config/config.php';
+	require_once '../../config/fonksiyon.php';
     require_once 'SayfaUst.php';
     require_once 'SolMenu.php';
     ?>
@@ -44,7 +44,7 @@ if(OturumAktif()==true)
                     </div>
 				</div>
 				<div class="col-md-12">
-					<textarea id="Footer" name="Footer" rows="10" cols="80"><?=$Footer?></textarea>
+					<textarea id="Footer" name="Footer" rows="10" cols="80"><?= $SiteCopyright ?></textarea>
 				</div>
 				<div class="col-md-6"></div>
 				<div class="col-md-6">

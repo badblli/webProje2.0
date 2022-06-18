@@ -2,7 +2,7 @@
 require("config/config.php");
 require("config/functions.php");
 require("config/sitePages.php");
-$icerikler = DB::get("SELECT * FROM config ORDER BY id DESC");
+$icerikler = $conn->prepare("SELECT * FROM config ORDER BY id DESC");
 $hepsi = $conn->prepare("SELECT COUNT(id) FROM products LIMIT 1");
 $gubre = $conn->prepare("SELECT COUNT(id) FROM products WHERE urunTuru = 'Gübre' and urunDurum = '1'");
 $ilac = $conn->prepare("SELECT COUNT(id) FROM products WHERE urunTuru = 'İlaç' and urunDurum = '1'");
@@ -119,7 +119,7 @@ if((!$SayfaKoduDegeri) or ($SayfaKoduDegeri == "") or ($SayfaKoduDegeri==0)){
         <li><a href="#news">HABERLER</a></li>
         <li><a href="#products">ÜRÜNLER</a></li>
         <li><a href="#contact">İLETİŞİM</a></li>
-        <li><a href="xtbadmin/index.php">ADMIN</a></li>
+        <li><a href="xtbadmin/Sayfalar/Anasayfa.php">ADMIN</a></li>
       </ul>
     </div>
   </div>

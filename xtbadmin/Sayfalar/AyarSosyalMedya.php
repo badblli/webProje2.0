@@ -1,9 +1,9 @@
 <?php
-require_once '../../system/guvenlik.php';
+require_once '../../config/guvenlik.php';
 if(OturumAktif()==true)
 {
-    require_once '../../system/ayar.php';
-	require_once '../../system/fonksiyon.php';
+    require_once '../../config/config.php';
+	require_once '../../config/fonksiyon.php';
     require_once 'SayfaUst.php';
     require_once 'SolMenu.php';
     ?>
@@ -36,8 +36,8 @@ if(OturumAktif()==true)
                                 <div class="col-sm-9">
                                     <input type="text" name="Facebook"
                                            class="form-control input-sm "
-                                           value="<?= $Facebook ?>"
-                                           placeholder="https://www.facebook.com/mucahid1topal">
+                                           value="<?= $FacebookLink?>"
+                                           placeholder="">
                                 </div>
                             </div>
                             <div class="form-group" >
@@ -46,50 +46,23 @@ if(OturumAktif()==true)
                                     <input id="Twitter" type="text"
                                            name="Twitter"
                                            class="form-control input-sm "
-                                           value="<?= $Twitter ?>"
-                                           placeholder="http://twitter.com/mucahittopal">
+                                           value="<?= $TwitterLink ?>"
+                                           placeholder="">
                                 </div>
                             </div>
-                            <div class="form-group" >
-                                <label class="col-sm-2 control-label">Skype</label>
-                                <div class="col-sm-9">
-                                    <input id="Skype" type="text"
-                                           name="Skype"
-                                           class="form-control input-sm "
-                                           value="<?= $Skype ?>"
-                                           placeholder="http://skype.com/mucahittopall">
-                                </div>
-                            </div>
-                            <div class="form-group" >
-                                <label class="col-sm-2 control-label">GPlus</label>
-                                <div class="col-sm-9">
-                                    <input id="GPlus" type="text"
-                                           name="GPlus"
-                                           class="form-control input-sm "
-                                           value="<?= $GPlus ?>"
-                                           placeholder="https://plus.google.com/u/1/117110437704859894125">
-                                </div>
-                            </div>
+                            
+                          
                             <div class="form-group" >
                                 <label class="col-sm-2 control-label">Instagram</label>
                                 <div class="col-sm-9">
                                     <input id="Instagram" type="text"
                                            name="Instagram"
                                            class="form-control input-sm "
-                                           value="<?= $Instagram ?>"
-                                           placeholder="https://instagram.com/mucahittopall?ref=badge">
+                                           value="<?= $InstagramLink ?>"
+                                           placeholder="">
                                 </div>
                             </div>
-                            <div class="form-group" >
-                                <label class="col-sm-2 control-label">Google Analytics</label>
-                                <div class="col-sm-9">
-                                    <input id="GoogleAnalytics" type="text"
-                                           name="GoogleAnalytics"
-                                           class="form-control input-sm "
-                                           value="<?= $GoogleAnalytics ?>"
-                                           placeholder="UA-XXXXXXXXX-X">
-                                </div>
-                            </div>
+                           
                         
                         </div>
 						<div class="col-md-6"></div>

@@ -62,10 +62,10 @@ if(OturumAktif()==true)
                       <tr>
                         <th style="display: none;"></th>
                         <th>Resim</th>
-                        <th>Kategori</th>
                         <th>Ürün&nbsp;Adı</th>
-                        <th>Üretici&nbsp;Firma</th>
                         <th>Ürün&nbsp;Türü</th>
+                        <th>Üretici&nbsp;Firma</th>
+                        <th></th>
                         <th>Açıklama</th>
                       </tr>
                     </thead>

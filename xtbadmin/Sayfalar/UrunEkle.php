@@ -10,32 +10,30 @@ if(OturumAktif()==true)
 	// $QueryTip=$db->query("SELECT * FROM uruntipleri WHERE IsActive=1");
 	// $QueryRenk=$db->query("SELECT * FROM urunrenkleri WHERE IsActive=1");
 	//$ID="";
-	$urunAdi= " ";
-	$ureticiFirma= " ";
-	$UrunTipi= " ";
-	$UrunRengi= " ";
-	$UrunKatID= " ";
-	$UrunAciklama= " ";
-	$Resim= " ";
+		$urunAdi		=  " ";
+		$urunTuru		= " ";
+		$ureticiFirma	= " ";
+		$urunAciklama	=  " ";
+		$urunResim		=  " ";
+		$urunDurum = " ";
 	if($_GET)
 	{
 		 if ($_SERVER['REQUEST_METHOD'] === 'GET') 
 		 {
 			if($_GET['islem']=="Duzenle")
 			{
-				$ID=$_GET['ID'];
-				$Query=$db->prepare("SELECT * FROM products WHERE urunDurum=1 AND id=?");
+				$ID=$_GET['id'];
+				$Query=$conn->prepare("SELECT * FROM products WHERE urunDurum=1 AND id=?");
 				$Query->execute(array($ID));
 				$Row = $Query->fetch(PDO::FETCH_ASSOC);
 				if($Row)
 				{
-					$UrunKatID= $Row["id"];
-					$UrunAdi= $Row["UrunAdi"];
-					$UrunKodu= $Row["ureticiFirma"];
-					$UrunTipi= $Row["urunTuru"];
-					$UrunRengi= $Row["urunSatisFiyat"];
-					$UrunAciklama= $Row["urunAciklama"];
-					$Resim= $Row["urunResmi"];
+                    $urunAdi		= $Row['urunAdi'];
+                    $urunTuru		= $Row['urunTuru'];
+                    $ureticiFirma	= $Row['ureticiFirma'];
+                    $urunAciklama	= $Row['urunAciklama'];
+                    $urunResim		= $Row['urunResim'];
+                    $urunDurum      = $Row['urunDurum'];
 				}
 			}
 		}
@@ -50,8 +48,7 @@ if(OturumAktif()==true)
         <div class="col-md-12">
           <div class="box box-success">
             <div class="box-header">
-              <h3 class="box-title">Ürün Ekle
-              </h3>
+              <h3 class="box-title">Ürün Ekle</h3>
               <!-- tools box -->
               <div class="pull-right box-tools">
                 <button type="button" class="btn bg-green btn-sm" data-widget="collapse" data-toggle="tooltip" title="Gizle">
@@ -99,25 +96,10 @@ if(OturumAktif()==true)
 									</select>
 								</div>
 							</div>
-                            <div class="form-group" >
-									<label class="col-sm-4 control-label">Ürün Kategorisi</label>
-									<div class="col-sm-8">
-										<select id="UrunKatID" type="text"
-											name="UrunKatID" value="<?= $UrunKatID ?>" class="form-control input-sm">
-											<option value=""></option>
-											<?php foreach($QueryKat as $Row){
-												$UrunKatID=$Row['ID'];
-												$KategoriAdi=$Row['KategoriAdi'];
-											?>
-											<option value="<?=$UrunKatID?>"><?=$KategoriAdi?></option>
-											<?php } ?>
-										</select>
-									</div>
-								</div>
 								<div class="form-group" >
 									<label class="col-sm-4 control-label">Ürün Açıklaması</label>
 									<div class="col-sm-8">
-										<textarea type="text" name="UrunAciklama" class="form-control input-sm " rows="3" cols="80"><?= $UrunAciklama ?></textarea>
+										<textarea type="text" name="UrunAciklama" class="form-control input-sm " rows="3" cols="80"><?= $urunAciklama ?></textarea>
 									</div>
 								</div>
 							</div>
