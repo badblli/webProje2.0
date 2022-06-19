@@ -1,7 +1,7 @@
 <?php
 require("config/config.php");
 require("config/functions.php");
-require("config/sitePages.php");
+//require("config/sitePages.php");
 $icerikler = $conn->prepare("SELECT * FROM config ORDER BY id DESC");
 $hepsi = $conn->prepare("SELECT COUNT(id) FROM products LIMIT 1");
 $gubre = $conn->prepare("SELECT COUNT(id) FROM products WHERE urunTuru = 'Gübre' and urunDurum = '1'");
