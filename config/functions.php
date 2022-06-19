@@ -1,6 +1,6 @@
 <?php
 
-$IPAdresi = $_SERVER["REMOTE_ADDR"];
+$IPAdresi = $_SERVER["REMOTE_ADDR"] ?? '165.22.205.60';
 $ZamanDamgasi = time();
 $TarihSaat = date("d.m.Y H:i:s", $ZamanDamgasi);
 
