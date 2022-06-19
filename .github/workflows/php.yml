@@ -19,4 +19,4 @@ jobs:
     - uses: nanasess/setup-php@v3
       with:
         php-version: '7.4'
-    - run: index.php
+    - run: php index.php
