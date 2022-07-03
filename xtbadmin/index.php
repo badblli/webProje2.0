@@ -83,12 +83,7 @@ if ($_SESSION && $_SESSION["Oturum"] != False) {
             $bilgi = '';
         }
     ?>
-    <!-- 
-Bismillahirrahmanirrahim
-Bu Sistem Mücahit TOPAL tarafından Kodlanmıştır.
-info@mucahittopal.com
-www.mucahittopal.com
--->
+
 <!DOCTYPE html>
 <html>
 <head>
